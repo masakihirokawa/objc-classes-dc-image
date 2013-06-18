@@ -14,24 +14,31 @@
 
 @implementation ViewController
 
+typedef enum sample : NSInteger {
+    MODE_IMAGE_VIEW = 1,
+    MODE_BG_IMAGE = 2,
+    MODE_MASK_IMAGE = 3,
+    MODE_RESIZE_IMAGE = 4
+} sample;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
     switch (MODE) {
-        case 1:
+        case MODE_IMAGE_VIEW:
             //イメージを表示
             [self setImageView];
             break;
-        case 2:
+        case MODE_BG_IMAGE:
             //全画面の背景画像を表示
             [self setBackgroundImage];
             break;
-        case 3:
+        case MODE_MASK_IMAGE:
             //画像にマスクを適用
             [self setImageMask];
             break;
-        case 4:
+        case MODE_RESIZE_IMAGE:
             //画像のリサイズ適用
             [self resizeImage];
             break;

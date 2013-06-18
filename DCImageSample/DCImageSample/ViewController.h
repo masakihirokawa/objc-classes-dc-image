@@ -10,7 +10,7 @@
 #import "DCImage.h"
 
 //サンプルの処理振り分け (1〜4)
-#define MODE               1
+#define MODE               3
 
 #define IMG_WIDTH_IPHONE5  320
 #define IMG_HEIGHT_IPHONE5 568
