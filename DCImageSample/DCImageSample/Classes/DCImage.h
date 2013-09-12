@@ -31,12 +31,14 @@
     NSString       *backgroundImageExt;
 }
 
+#pragma mark - property
 @property (nonatomic) NSInteger backgroundImageX;
 @property (nonatomic) NSInteger backgroundImageY;
 @property (nonatomic) NSInteger backgroundImageWidth;
 @property (nonatomic) NSInteger backgroundImageHeight;
 @property (nonatomic) NSString *backgroundImageExt;
 
+#pragma mark - public method
 + (UIImageView *)imageView:(NSString *)imageName imageExt:(NSString *)ext rect:(CGRect)rect;
 - (void)setBackgroundImageRectangle;
 - (void)setBackgroundImageType;
@@ -46,9 +48,9 @@
 - (NSString *)backgroundImageType;
 - (int)backgroundImageWidth;
 - (int)backgroundImageHeight;
-
 + (UIImage *)mask:(UIImage *)image withMask:(UIImage *)maskImage;
 + (UIImage *)resize:(UIImage *)image rect:(CGRect)rect;
++ (NSString *)getImgFileName:(NSString *)src;
 + (UIImage *)getUIImageFromResources:(NSString*)fileName ext:(NSString*)ext;
 
 @end
